@@ -1,6 +1,4 @@
 const router = require("express").Router();
-
-const { createReadStream } = require("fs");
 const {
   getAllThoughts,
   getThoughtById,
