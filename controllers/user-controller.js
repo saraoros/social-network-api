@@ -30,6 +30,15 @@ const userController = {
   // Get all Users
   getAllUsers(req, res) {
     User.find({})
+    // added this 4/28
+      .populate({
+        path: "thoughts",
+        select: "-__v",
+      })
+      .populate({
+        path: "friends",
+        select: "-__v",
+      })
       .select("-__v")
       .sort({ _id: -1 })
       .then((dbUserData) => res.json(dbUserData))
@@ -40,7 +49,7 @@ const userController = {
   },
   // Create a User
   createUser({ body }, res) {
-    User.creat(body)
+    User.create(body)
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.json(err));
   },
@@ -60,7 +69,7 @@ const userController = {
       .catch((err) => res.json(err));
   },
 
-  // Delete a User & User's associated Thoughts
+  // Delete a User & their associated Thoughts
   deleteUser({ params }, res) {
     Thought.deleteMany({ userId: params.id })
       .then(() => {
