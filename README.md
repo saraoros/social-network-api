@@ -22,14 +22,16 @@
 [Friend & Reaction Routes](https://drive.google.com/file/d/1_0lS7R60VptkyusTK92oqPi-mHJ95WLu/view)
 
   # Installation
-  - Run the following commands in your terminal: `npm i ` and then run `npm start` to start the application
+  - Run the following commands in your terminal to start the application: 
+  
+  - `npm i ` 
+  - `npm start`
 
   # Technologies
   - JavaScript
   - Node.js
   - Express.js
   - MongoDB
-  - MongoDB Compass
   - Mongoose ODM
 
 
@@ -40,7 +42,7 @@
   - sara.oros@yahoo.com
 
   # License
-  Copyright © 2022
+  Copyright © 2022 Sara Oros
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
